@@ -1,0 +1,44 @@
+/* Generals */
+:root {
+  --bs-primary: #005cff;
+  --bs-primary-rgb: 0, 92, 255;
+  --bs-secondary: #6220c1;
+  --bs-secondary-rgb: 98, 32, 193;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.fs-7 {
+  font-size: 0.875rem !important;
+}
+
+/* Slider 1 */
+.h-slider-1 {
+  height: 300px !important;
+}
+
+.h-slider-1 h2 {
+  font-size: calc(2rem + 1.5vw);
+}
+
+/* Media screen adjustments */
+@media (min-width: 992px) {
+  .bg-lg-transparent {
+    background-color: transparent !important;
+  }
+
+  .w-lg-0 {
+    max-width: fit-content !important;
+  }
+
+  /* Slider 1 */
+  .h-slider-1 {
+    height: 510px !important;
+  }
+
+  .h-slider-1 h2 {
+    font-size: calc(5rem + 1.5vw);
+  }
+}

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="shortcut icon" href="/public/favicon.svg" type="image/svg+xml" />
 
@@ -15,13 +17,231 @@
       rel="stylesheet"
       href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Avanti - Você faz a moda.</title>
   </head>
   <body>
-    <h1>Seja bem-vindo(a)!</h1>
+    <header>
+      <div id="top-bar" class="container-fluid bg-primary">
+        <div class="container p-2 text-center lh-sm">
+          <span class="text-white fw-bold fs-7">
+            Ganhe <span class="bg-secondary px-1 rounded-2">R$10,00</span> de
+            desconto no seu primeiro pedido. Utilize o cupom
+            <span class="fst-italic fw-light">DESCONTO10</span>
+          </span>
+        </div>
+      </div>
 
-    <i class="bi bi-alarm"></i>
+      <div id="navigation" class="container text-center text-white">
+        <nav class="navbar navbar-expand-lg px-3">
+          <div class="row flex-fill">
+            <!-- Collapsed Menu -->
+            <div
+              class="d-lg-none col-2 p-0 order d-flex align-items-center justify-content-start"
+            >
+              <button
+                class="navbar-toggler border-0 p-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+
+            <!-- Brand -->
+            <div class="col col-lg-2 py-4 p-lg-0 p-xl-2 order-lg-0 d-flex">
+              <a class="navbar-brand w-100 m-0 w-lg-0">
+                <img
+                  src="/img/avanti-logo.svg"
+                  alt="Avanti Fashion"
+                  width="152"
+                />
+              </a>
+            </div>
+
+            <!-- User Actions -->
+            <div
+              class="col-2 col-lg-4 p-0 order-lg-2 d-flex align-items-center justify-content-end"
+            >
+              <div id="user_actions" class="d-flex align-items-center gap-4">
+                <div id="user_id" class="d-none d-lg-flex align-items-center">
+                  <i class="bi bi-person fs-2 text-primary"></i>
+                  <p class="text-black text-start small lh-1 m-0">
+                    Olá,<br />
+                    <span>Luciano Pereira</span>
+                  </p>
+                </div>
+                <div id="cart">
+                  <i class="bi bi-cart fs-3 text-black"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search Form -->
+            <div
+              class="col-12 col-lg-6 p-0 ps-lg-3 order-lg-1 d-flex align-items-center"
+            >
+              <div
+                class="ps-2 border border-2 border rounded-2 d-flex flex-fill"
+              >
+                <form class="d-flex flex-fill" role="search">
+                  <input
+                    class="border-0 flex-fill"
+                    type="search"
+                    placeholder="Digite aqui o que você procura"
+                    aria-label="Search"
+                  />
+
+                  <button
+                    class="btn btn-outline-success border-0"
+                    type="submit"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Text Menu -->
+            <!-- <div class="d-none d-lg-flex col-12 p-0 order-lg-3"> -->
+            <div
+              class="collapse navbar-collapse bg-light bg-lg-transparent p-2 order-lg-4 col"
+              id="navbarNavDropdown"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Moda Infanto Juvenil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Moda Masculina</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Moda Feminina
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Blusas</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Calças</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Acessórios</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- </div> -->
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero_slider">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active"
+              style="
+                background-image: url(/img/slider-1-full.webp);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+              "
+            >
+              <div class="h-slider-1 d-flex container">
+                <div class="w-50"></div>
+                <div
+                  id="slider-infos"
+                  class="d-flex flex-fill flex-column align-items-center justify-content-center pe-lg-5"
+                  style="font-family: 'Nunito'"
+                >
+                  <h2 class="text-uppercase fw-bolder text-center lh-1">
+                    super <span class="fw-normal">sale</span>
+                  </h2>
+                  <span class="d-block text-uppercase text-center text-primary"
+                    >Itens selecionados com até</span
+                  >
+                  <span
+                    class="d-block text-uppercase text-center text-primary fw-bold"
+                    style="font-size: calc(2rem + 1.5vw)"
+                    >50%off</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
