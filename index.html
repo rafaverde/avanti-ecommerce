@@ -25,6 +25,7 @@
 
     <title>Avanti - Você faz a moda.</title>
   </head>
+
   <body>
     <header class="sticky-top bg-white shadow-sm">
       <div id="top-bar" class="container-fluid bg-primary">
@@ -329,11 +330,11 @@
 
       <section
         id="product_banner_detailed"
-        class="p-5 my-5"
+        class="px-2 py-5 p-lg-5 my-5"
         style="background-color: #dedede"
       >
         <div
-          class="container d-flex flex-column flex-lg-row gap-5 align-items-center"
+          class="container d-flex flex-column-reverse flex-lg-row flex-lg-row gap-5 align-items-center"
         >
           <div>
             <h2 class="text-uppercase">Lorem Ipsum</h2>
@@ -390,6 +391,63 @@
             alt="Caneca Avanti"
             class="w-100"
           />
+        </div>
+      </section>
+
+      <section id="get_in_contact">
+        <div
+          id="get_in_contact_header"
+          class="d-flex align-items-center justify-content-center get-in-contact-header"
+        >
+          <h2 class="bg-primary w-100 text-center p-3 p-lg-5 text-white">
+            Entre em contato conosco e verifique a disponibilidade para sua
+            região!
+          </h2>
+        </div>
+
+        <div id="get_in_contact_form" class="container my-5 p-2">
+          <h3 class="text-center w-100 mb-4">
+            Cadastre-se na nossa <span class="text-primary">newsletter</span>
+          </h3>
+          <form
+            class="bg-body-secondary rounded-2 px-3 px-lg-5 py-4 py-lg-5 d-lg-flex align-items-lg-center gap-4 justify-content-between"
+          >
+            <div class="mb-3 mb-lg-0 flex-fill">
+              <input
+                type="text"
+                class="form-control py-2"
+                id="input_name"
+                placeholder="Digite seu nome"
+              />
+            </div>
+            <div class="mb-3 mb-lg-0 flex-fill">
+              <input
+                type="email"
+                class="form-control py-2"
+                id="input_email"
+                placeholder="Digite seu e-mail"
+              />
+            </div>
+            <div class="mb-3 mb-lg-0 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Estou de acordo com a
+                <a href="#" class="text-body-emphasis"
+                  >Política de Privacidade</a
+                ></label
+              >
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary w-100 py-3 py-lg-2 btn-submit-newsletter"
+            >
+              Cadastrar
+            </button>
+          </form>
         </div>
       </section>
     </main>
