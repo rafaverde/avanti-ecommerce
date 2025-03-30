@@ -44,6 +44,15 @@ body {
   height: 449px;
 }
 
+/* Footer mobile menu adjustments */
+.accordion-button {
+  background-color: var(--bs-tertiary-bg) !important;
+}
+
+.accordion-button::after {
+  background-image: url(/src/img/accordion-arrow-button.svg) !important;
+}
+
 /* Media screen adjustments */
 @media (min-width: 992px) {
   .bg-lg-transparent {
