@@ -90,7 +90,7 @@
                       width: 20px;
                       height: 20px;
                     "
-                    >10</span
+                    >99</span
                   >
                   <i class="bi bi-cart fs-3 text-black"></i>
                 </div>
@@ -182,11 +182,15 @@
 
     <main>
       <section id="hero_slider">
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <div
+          id="carouselIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-indicators">
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target="#carouselIndicators"
               data-bs-slide-to="0"
               class="active"
               aria-current="true"
@@ -194,7 +198,7 @@
             ></button>
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target="#carouselIndicators"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             ></button>
@@ -267,7 +271,7 @@
           <button
             class="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselIndicators"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -276,7 +280,7 @@
           <button
             class="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselIndicators"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -285,7 +289,7 @@
         </div>
       </section>
 
-      <section id="product_banner" class="p-1 mt-5">
+      <section id="product_banner" class="p-1 my-5">
         <div
           class="container d-flex flex-column flex-lg-row gap-5 align-items-center"
         >
@@ -315,7 +319,53 @@
               nemo perferendis, cupiditate exercitationem, beatae dignissimos
               eaque ipsa repellendus inventore, enim magni.
             </p>
+
+            <button class="btn btn-primary">
+              <i class="bi bi-plus"></i> Detalhes
+            </button>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="product_banner_detailed"
+        class="p-5 my-5"
+        style="background-color: #dedede"
+      >
+        <div
+          class="container d-flex flex-column flex-lg-row gap-5 align-items-center"
+        >
+          <div>
+            <h2 class="text-uppercase">Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+              quas in reiciendis natus architecto quidem, accusamus neque
+              laborum dolore, cum quisquam reprehenderit facere aut. Modi nam
+              dicta rem natus vero?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              placeat ratione animi aut nihil repellat! Placeat quisquam soluta
+              nemo perferendis, cupiditate exercitationem, beatae dignissimos
+              eaque ipsa repellendus inventore, enim magni.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              placeat ratione animi aut nihil repellat! Placeat quisquam soluta
+              nemo perferendis, cupiditate exercitationem, beatae dignissimos
+              eaque ipsa repellendus inventore, enim magni.
+            </p>
+
+            <button class="btn btn-primary">
+              <i class="bi bi-plus"></i> Detalhes
+            </button>
+          </div>
+
+          <img
+            src="/src/img/caneca-2-img.webp"
+            alt="Caneca Avanti"
+            class="w-100"
+          />
         </div>
       </section>
     </main>

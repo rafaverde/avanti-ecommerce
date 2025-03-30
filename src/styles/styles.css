@@ -23,6 +23,17 @@ body {
   font-size: calc(2rem + 1.5vw);
 }
 
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  background-color: #545454 !important;
+}
+
+.carousel-indicators .active {
+  background-color: #005cff !important;
+}
+
 /* Media screen adjustments */
 @media (min-width: 992px) {
   .bg-lg-transparent {
