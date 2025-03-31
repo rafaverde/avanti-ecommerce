@@ -30,7 +30,12 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     />
 
     <title>Avanti Fashion - Você faz a moda.</title>
@@ -417,6 +422,20 @@
         </div>
       </section>
 
+      <section id="popular_products">
+        <div class="container py-5">
+          <header class="d-flex align-items-center justify-content-between">
+            <h2 class="m-0 fs-4 fw-bold">Mais populares</h2>
+            <a href="" class="m-0 text-muted">Ver mais</a>
+          </header>
+
+          <div
+            id="popular_products_carousel"
+            class="products-carousel mt-4"
+          ></div>
+        </div>
+      </section>
+
       <section id="get_in_contact">
         <div
           id="get_in_contact_header"
@@ -493,7 +512,26 @@
       </div>
     </footer>
 
+    <!-- Load Jquery for Slick Slider -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+    <!-- Loads Bootstrap JS -->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Loads Slick Slider -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- Custom scripts -->
     <script src="/src/js/scripts.js"></script>
   </body>
 </html>

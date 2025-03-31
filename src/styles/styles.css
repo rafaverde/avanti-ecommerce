@@ -34,6 +34,49 @@ body {
   background-color: #005cff !important;
 }
 
+/* Product Slider customization */
+.prod-arrow {
+  background-color: white !important;
+}
+
+.slick-prev {
+  left: 0 !important;
+}
+
+.slick-next {
+  right: 0 !important;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #fff;
+  border: 1px solid #005cff !important;
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
+
+.slick-prev i,
+.slick-next i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  color: #005cff;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #ddd;
+}
+
 /* Get in Contact Section */
 .get-in-contact-header {
   background-image: url(/src/img/avanti-sede.webp);
@@ -61,6 +104,15 @@ body {
 
   .w-lg-0 {
     max-width: fit-content !important;
+  }
+
+  /* Product Slider customization */
+  .slick-prev {
+    left: -25px !important;
+  }
+
+  .slick-next {
+    right: -25px !important;
   }
 
   /* Slider 1 */

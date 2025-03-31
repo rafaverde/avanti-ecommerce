@@ -281,14 +281,16 @@ function screenResizeListener() {
   });
 }
 
-//Populate new product slider
-function populateNewProductSlider() {
-  const slider = document.getElementById("new_products_carousel");
+//Populate a slider with especific id (carouselID: string)
+function populateNewProductSlider(carouselId) {
+  const slider = document.getElementById(carouselId);
+
+  console.log(slider);
 
   const cardsArray = Array.from(
     { length: 8 },
     () => `
-    <div class="card p-3 position-relative" style="width: 18rem">
+    <div class="card p-3 mx-1 position-relative" style="width: 18rem">
               <div class="tag-new position-absolute">
                 <span class="bg-secondary text-white px-2 py-1 rounded-2"
                   >Novo</span
@@ -354,10 +356,50 @@ function toggleFavouriteIcon() {
 }
 
 // Functions calls
-toggleFooterLayout();
-screenResizeListener();
-
 document.addEventListener("DOMContentLoaded", function () {
-  populateNewProductSlider();
+  toggleFooterLayout();
+  screenResizeListener();
+  populateNewProductSlider("new_products_carousel");
+  populateNewProductSlider("popular_products_carousel");
   toggleFavouriteIcon();
+
+  // Customize product-slider
+  $(".products-carousel").each(function () {
+    $(this).slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: true,
+      prevArrow:
+        '<button type="button" class="slick-prev prod-arrow shadow"><i class="bi bi-arrow-left-short"></i></button>',
+      nextArrow:
+        '<button type="button" class="slick-next prod-arrow shadow"><i class="bi bi-arrow-right-short"></i></button>',
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          },
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  });
 });
