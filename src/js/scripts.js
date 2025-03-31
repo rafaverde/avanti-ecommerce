@@ -281,6 +281,59 @@ function screenResizeListener() {
   });
 }
 
+//Populate new product slider
+function populateNewProductSlider() {
+  const slider = document.getElementById("new_products_carousel");
+
+  const cardsArray = Array.from(
+    { length: 8 },
+    () => `
+    <div class="card p-3 position-relative" style="width: 18rem">
+              <div class="tag-new position-absolute">
+                <span class="bg-secondary text-white px-2 py-1 rounded-2"
+                  >Novo</span
+                >
+              </div>
+
+              <div class="fav-button position-absolute top-0 end-0">
+                <button class="bg-transparent border-0 mt-2 me-2">
+                  <i class="bi bi-heart fs-4 text-muted"></i>
+                </button>
+              </div>
+
+              <img
+                src="/src/img/produto-exemplo.webp"
+                class="card-img-top"
+                alt="Exemplo produto"
+              />
+              <div class="card-body p-0 pt-3">
+                <h3 class="card-title fs-4">
+                  Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                </h3>
+                <div class="sell-info d-flex gap-4 my-3">
+                  <div class="prices d-flex flex-column">
+                    <span class="text-decoration-line-through lh-1"
+                      >R$ 100</span
+                    >
+                    <span class="fs-3 fw-bold lh-base">R$ 79,90</span>
+                  </div>
+                  <div class="off-tag">
+                    <span
+                      class="text-white px-2 py-1 rounded-2"
+                      style="background-color: #5ec0be"
+                      >10% OFF</span
+                    >
+                  </div>
+                </div>
+                <a href="" class="btn btn-primary w-100 py-2">Comprar</a>
+              </div>
+            </div>
+  `
+  );
+
+  slider.innerHTML = cardsArray.join("");
+}
+
 // Toggle favourite icon for layout porpouse
 function toggleFavouriteIcon() {
   const favButtons = document.querySelectorAll(".fav-button button");
@@ -305,5 +358,6 @@ toggleFooterLayout();
 screenResizeListener();
 
 document.addEventListener("DOMContentLoaded", function () {
+  populateNewProductSlider();
   toggleFavouriteIcon();
 });
