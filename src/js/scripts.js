@@ -281,5 +281,29 @@ function screenResizeListener() {
   });
 }
 
+// Toggle favourite icon for layout porpouse
+function toggleFavouriteIcon() {
+  const favButtons = document.querySelectorAll(".fav-button button");
+
+  favButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const favIcon = this.querySelector("i");
+
+      if (favIcon.classList.contains("bi-heart")) {
+        favIcon.classList.remove("bi-heart", "text-muted");
+        favIcon.classList.add("bi-heart-fill", "text-danger");
+      } else {
+        favIcon.classList.remove("bi-heart-fill", "text-danger");
+        favIcon.classList.add("bi-heart", "text-muted");
+      }
+    });
+  });
+}
+
+// Functions calls
 toggleFooterLayout();
 screenResizeListener();
+
+document.addEventListener("DOMContentLoaded", function () {
+  toggleFavouriteIcon();
+});
