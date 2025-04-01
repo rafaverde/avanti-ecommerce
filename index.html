@@ -121,8 +121,9 @@
               <div
                 class="ps-2 border border-2 border rounded-2 d-flex flex-fill"
               >
-                <form class="d-flex flex-fill" role="search">
+                <form class="d-flex flex-fill" role="search" id="search_form">
                   <input
+                    id="search_input"
                     class="border-0 flex-fill"
                     type="search"
                     placeholder="Digite aqui o que você procura"
@@ -130,12 +131,38 @@
                   />
 
                   <button
-                    class="btn btn-outline-success border-0"
+                    class="btn btn-outline-primary border-0"
                     type="submit"
                   >
                     <i class="bi bi-search"></i>
                   </button>
                 </form>
+              </div>
+            </div>
+
+            <!-- Toast -->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div
+                id="searchToast"
+                class="toast"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
+                <div class="toast-header bg-primary text-white">
+                  <strong class="me-auto">Alerta</strong>
+                  <button
+                    type="button"
+                    class="text-white bg-transparent d-flex align-items-center justify-content-center fs-5 border-0"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                  >
+                    <i class="bi bi-x"></i>
+                  </button>
+                </div>
+                <div
+                  class="toast-body bg-body-secondary text-muted text-start py-4"
+                ></div>
               </div>
             </div>
 

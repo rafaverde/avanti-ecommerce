@@ -372,6 +372,21 @@ function toggleMegaMenu() {
   });
 }
 
+// Search input interaction
+function searchContent() {
+  const searchValue = document.getElementById("search_input").value;
+  const toastBody = document.querySelector("#searchToast .toast-body");
+
+  if (!searchValue) {
+    toastBody.textContent = `É necessário colocar algum termo para a busca.`;
+  } else {
+    toastBody.textContent = `Você buscou por ${searchValue}`;
+  }
+
+  const toast = new bootstrap.Toast(document.getElementById("searchToast"));
+  toast.show();
+}
+
 // Functions calls
 document.addEventListener("DOMContentLoaded", function () {
   toggleFooterLayout();
@@ -380,6 +395,14 @@ document.addEventListener("DOMContentLoaded", function () {
   populateNewProductSlider("new_products_carousel");
   populateNewProductSlider("popular_products_carousel");
   toggleFavouriteIcon();
+
+  // Search form listener
+  document
+    .getElementById("search_form")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      searchContent();
+    });
 
   // Customize product-slider
   $(".products-carousel").each(function () {
