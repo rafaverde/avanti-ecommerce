@@ -285,8 +285,6 @@ function screenResizeListener() {
 function populateNewProductSlider(carouselId) {
   const slider = document.getElementById(carouselId);
 
-  console.log(slider);
-
   const cardsArray = Array.from(
     { length: 8 },
     () => `
@@ -355,10 +353,30 @@ function toggleFavouriteIcon() {
   });
 }
 
+// Toggle Mega Menu on mouse hover
+function toggleMegaMenu() {
+  const menuItems = document.querySelectorAll(
+    ".nav-item.dropdown.has-megamenu"
+  );
+
+  menuItems.forEach((menuItem) => {
+    const megaMenu = menuItem.querySelector(".dropdown-menu.megamenu");
+
+    menuItem.addEventListener("mouseenter", function () {
+      megaMenu.classList.add("show");
+    });
+
+    menuItem.addEventListener("mouseleave", function () {
+      megaMenu.classList.remove("show");
+    });
+  });
+}
+
 // Functions calls
 document.addEventListener("DOMContentLoaded", function () {
   toggleFooterLayout();
   screenResizeListener();
+  toggleMegaMenu();
   populateNewProductSlider("new_products_carousel");
   populateNewProductSlider("popular_products_carousel");
   toggleFavouriteIcon();
