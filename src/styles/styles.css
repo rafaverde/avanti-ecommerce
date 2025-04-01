@@ -14,6 +14,42 @@ body {
   font-size: 0.875rem !important;
 }
 
+/* Mega Menu */
+.navbar .megamenu {
+  padding: 1rem;
+}
+
+.megamenu {
+  overflow-y: scroll;
+}
+
+.navbar .has-megamenu {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar .has-megamenu {
+    display: block;
+    position: static !important;
+  }
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0 !important;
+  }
+}
+
+/* @media (max-width: 991px) {
+  .navbar.fixed-top .navbar-collapse,
+  .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 50vh;
+    margin-top: 10px;
+  }
+} */
+
 /* Slider 1 */
 .h-slider-1 {
   height: 300px !important;

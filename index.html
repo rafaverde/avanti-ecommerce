@@ -42,6 +42,7 @@
   </head>
 
   <body>
+    <h1 class="visually-hidden">Avanti Fashion - Sua loja de roupas online.</h1>
     <header class="sticky-top bg-white shadow-sm">
       <div id="top-bar" class="container-fluid bg-primary">
         <div class="container p-2 text-center lh-sm">
@@ -54,7 +55,7 @@
       </div>
 
       <div id="navigation" class="container text-center text-white">
-        <nav class="navbar navbar-expand-lg px-3">
+        <nav class="navbar navbar-expand-lg px-3" aria-label="Menu Principal">
           <div class="row flex-fill">
             <!-- Collapsed Menu -->
             <div
@@ -138,24 +139,87 @@
               </div>
             </div>
 
-            <!-- Text Menu -->
-            <!-- <div class="d-none d-lg-flex col-12 p-0 order-lg-3"> -->
+            <!-- Navbar / Text Menu -->
             <div
               class="collapse navbar-collapse bg-light bg-lg-transparent p-2 px-lg-0 order-lg-4 col"
               id="navbarNavDropdown"
             >
               <ul class="navbar-nav justify-content-lg-between flex-lg-fill">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
+                <li class="nav-item d-lg-none">
+                  <a href="" class="nav-link">Todas as Categorias</a>
+                </li>
+                <li class="nav-item dropdown has-megamenu">
+                  <a
+                    class="nav-link dropdown-toggle dropdown active d-flex align-items-center justify-content-center gap-1"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    ><i
+                      class="bi bi-list"
+                      style="font-size: 20px; line-height: 0; margin: 0"
+                    ></i>
+                    Todas as Categorias</a
                   >
+                  <div
+                    class="dropdown-menu megamenu w-100 p-4 shadow-sm border-0"
+                    role="menu"
+                  >
+                    <div class="row gap-2">
+                      <div class="col-md-3 border-end">
+                        <h5>Departamentos</h5>
+                        <ul class="list-unstyled">
+                          <li><a class="dropdown-item" href="#">Blusas</a></li>
+                          <li><a class="dropdown-item" href="#">Calças</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Acessórios</a>
+                          </li>
+                          <li><a class="dropdown-item" href="#">Blusas</a></li>
+                          <li><a class="dropdown-item" href="#">Calças</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Acessórios</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-3 border-end">
+                        <h5>Subcategorias</h5>
+                        <ul class="list-unstyled">
+                          <li><a class="dropdown-item" href="#">Casual</a></li>
+                          <li><a class="dropdown-item" href="#">Esporte</a></li>
+                          <li><a class="dropdown-item" href="#">Social</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="col d-flex justify-content-end">
+                        <div
+                          class="h-100 px-4 py-5 d-flex flex-column justify-content-center rounded-3"
+                          style="
+                            width: 50%;
+                            background-image: url(/src/img/mega-menu-image.webp);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                          "
+                        >
+                          <span class="text-white fs-2"
+                            >Confira os produtos
+                            <span class="fw-bolder"
+                              >que acabaram de chegar.</span
+                            ></span
+                          >
+
+                          <button
+                            type="button"
+                            class="btn btn-outline-light text-uppercase mt-4 py-2"
+                          >
+                            Ver todos
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Moda Infanto Juvenil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Moda Masculina</a>
-                </li>
+
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
@@ -177,10 +241,13 @@
                   </ul>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="#">Moda Infanto Juvenil</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="#">Moda Masculina</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Departamento</a>
+                  <a class="nav-link" href="#">Moda Masculina</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Departamento</a>
@@ -190,7 +257,6 @@
                 </li>
               </ul>
             </div>
-            <!-- </div> -->
           </div>
         </nav>
       </div>
