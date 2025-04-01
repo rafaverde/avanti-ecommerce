@@ -19,12 +19,6 @@ Você pode acessar o resultado clicando [aqui](https://avantiecommerce.netlify.a
 - Implementar funcionalidade de busca com JavaScript para apenas exibir um alerta com o texto buscado.
 - Implementar a interação dos carrrosséis, que foi feito através da biblioteca Slick.
 
-### Instalação
-
-Projeto foi desenvolvido com gerenciador de pacote **_npm_**, para executar localmente é necessário instalar os módulos.
-
-`npm install`
-
 ## Stack utilizada
 
 **Front-end:** HTML, CSS, JavaScript, Bootstrap, Slick Carousel
